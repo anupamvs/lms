@@ -161,35 +161,35 @@ override_whitelisted_methods = {
 # auto_cancel_exempted_doctypes = ["Auto Repeat"]
 
 # Add all simple route rules here
-website_route_rules = [
-	{"from_route": "/lms/<path:app_path>", "to_route": "lms"},
-	{
-		"from_route": "/courses/<course_name>/<certificate_id>",
-		"to_route": "certificate",
-	},
-]
+# website_route_rules = [
+# 	{"from_route": "/lms/<path:app_path>", "to_route": "lms"},
+# 	{
+# 		"from_route": "/courses/<course_name>/<certificate_id>",
+# 		"to_route": "certificate",
+# 	},
+# ]
 
-website_redirects = [
-	{"source": "/update-profile", "target": "/edit-profile"},
-	{"source": "/courses", "target": "/lms/courses"},
-	{
-		"source": r"^/courses/.*$",
-		"target": "/lms/courses",
-	},
-	{"source": "/batches", "target": "/lms/batches"},
-	{
-		"source": r"/batches/(.*)",
-		"target": "/lms/batches",
-		"match_with_query_string": True,
-	},
-	{"source": "/job-openings", "target": "/lms/job-openings"},
-	{
-		"source": r"/job-openings/(.*)",
-		"target": "/lms/job-openings",
-		"match_with_query_string": True,
-	},
-	{"source": "/statistics", "target": "/lms/statistics"},
-]
+# website_redirects = [
+# 	{"source": "/update-profile", "target": "/edit-profile"},
+# 	{"source": "/courses", "target": "/lms/courses"},
+# 	{
+# 		"source": r"^/courses/.*$",
+# 		"target": "/lms/courses",
+# 	},
+# 	{"source": "/batches", "target": "/lms/batches"},
+# 	{
+# 		"source": r"/batches/(.*)",
+# 		"target": "/lms/batches",
+# 		"match_with_query_string": True,
+# 	},
+# 	{"source": "/job-openings", "target": "/lms/job-openings"},
+# 	{
+# 		"source": r"/job-openings/(.*)",
+# 		"target": "/lms/job-openings",
+# 		"match_with_query_string": True,
+# 	},
+# 	{"source": "/statistics", "target": "/lms/statistics"},
+# ]
 
 update_website_context = [
 	"lms.widgets.update_website_context",
